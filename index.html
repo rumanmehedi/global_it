@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global IT Technology - Maintenance Solutions</title>
+
+    <!-- Google Fonts: Work Sans (Headings) and Open Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Work+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS (Pure CSS via CDN - No JavaScript) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+
+    <!-- Font Awesome (Pure CSS Vector Icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      /* Custom Design Tokens & Typography */
+      :root {
+        --brand-blue: #2b77c5;
+        --brand-blue-hover: #2264a8;
+        --brand-green: #38b449;
+        --brand-green-hover: #2e9b3d;
+        --brand-dark-footer: #212429;
+        --brand-text-dark: #222222;
+        --brand-text-muted: #6b7280;
+      }
+
+      body {
+        font-family:
+          "Open Sans",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        color: #4a5568;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .font-heading {
+        font-family: "Work Sans", sans-serif;
+      }
+
+      /* Colors */
+      .bg-brand-blue {
+        background-color: var(--brand-blue);
+      }
+
+      .bg-brand-blue-hover:hover {
+        background-color: var(--brand-blue-hover);
+      }
+
+      .text-brand-blue {
+        color: var(--brand-blue);
+      }
+
+      .border-brand-blue {
+        border-color: var(--brand-blue);
+      }
+
+      .bg-brand-green {
+        background-color: var(--brand-green);
+      }
+
+      .bg-brand-green-hover:hover {
+        background-color: var(--brand-green-hover);
+      }
+
+      .text-brand-green {
+        color: var(--brand-green);
+      }
+
+      .bg-brand-dark {
+        background-color: var(--brand-dark-footer);
+      }
+
+      /* Hexagonal subtle background pattern for Services */
+      .hexagonal-pattern {
+        background-color: #fbfcfe;
+        background-image:
+          radial-gradient(
+            circle at 5% 30%,
+            rgba(240, 246, 255, 0.9) 0%,
+            transparent 60%
+          ),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='121.24' viewBox='0 0 70 121.24'%3E%3Cpath d='M35 0 L70 20.2 L70 60.62 L35 80.82 L0 60.62 L0 20.2 Z M35 121.24 L70 101.04 L70 60.62 L35 40.42 L0 60.62 L0 101.04 Z' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-opacity='0.45'/%3E%3C/svg%3E");
+        background-repeat: repeat-y;
+        background-position: left top;
+      }
+
+      /* Dropdown CSS only */
+      .nav-dropdown:hover .nav-dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-dropdown-menu {
+        display: none;
+        transition: all 0.2s ease-in-out;
+      }
+
+      /* Custom smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="selection:bg-blue-600 selection:text-white">
+    <!-- ================= HERO SECTION (WITH INTEGRATED TRANSPARENT NAV & TALL BANNER) ================= -->
+    <section
+      class="relative w-full bg-[#26234b] overflow-hidden min-h-[750px] md:min-h-[820px] lg:min-h-[880px] flex flex-col justify-between pb-36 md:pb-44"
+    >
+      <!-- Hero Background Image (Planet Earth with Authentic Purple/Violet Glow) -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://b2363094.smushcdn.com/2.0/2363094/wp-content/uploads/2021/09/banner-principal-v2.jpg?lossy=1&strip=1&webp=1"
+          alt="One Business - Multiple IT Services"
+          class="w-full h-full object-cover object-right lg:object-center"
+        />
+        <!-- Authentic Purple/Navy Ambient Gradient (sampled from original screenshot) -->
+        <div
+          class="absolute inset-0"
+          style="
+            background: linear-gradient(
+              90deg,
+              rgba(38, 35, 73, 0.92) 0%,
+              rgba(38, 35, 73, 0.7) 45%,
+              rgba(42, 39, 84, 0.25) 75%,
+              transparent 100%
+            );
+          "
+        ></div>
+      </div>
+
+      <!-- Integrated Transparent Top Header / Navbar inside Hero -->
+      <header class="relative z-50 w-full bg-transparent pt-4">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between"
+        >
+          <!-- Pixel-Perfect Brand Logo -->
+          <a href="#" class="flex items-center space-x-3.5 group">
+            <!-- Stylized G Icon (Blue top & Green bottom) -->
+
+            <!-- Brand Text (White on dark hero) -->
+            <div class="flex flex-col">
+              <span>
+                <img width="300px" src="./img/Group-8@2x.webp" alt="" />
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links (Clean White for Transparent Hero) -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              class="text-sm font-bold text-white hover:text-blue-200 transition py-2"
+            >
+              Home
+            </a>
+
+            <!-- About us (Dropdown) -->
+            <div class="relative nav-dropdown py-2">
+              <a
+                href="#about"
+                class="flex items-center text-sm font-semibold text-white hover:text-blue-200 transition"
+              >
+                <span>About us</span>
+                <i
+                  class="fa-solid fa-chevron-down text-xs ml-1.5 text-blue-200"
+                ></i>
+              </a>
+              <div
+                class="nav-dropdown-menu absolute left-0 top-full w-48 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50"
+              >
+                <a
+                  href="#about"
+                  class="block px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
+                  >How we work</a
+                >
+              </div>
+            </div>
+
+            <!-- Services (Dropdown) -->
+            <div class="relative nav-dropdown py-2">
+              <a
+                href="#services"
+                class="flex items-center text-sm font-semibold text-white hover:text-blue-200 transition"
+              >
+                <span>Services</span>
+                <i
+                  class="fa-solid fa-chevron-down text-xs ml-1.5 text-blue-200"
+                ></i>
+              </a>
+              <div
+                class="nav-dropdown-menu absolute left-0 top-full w-56 bg-white rounded-md shadow-lg border border-gray-100 py-2 z-50"
+              >
+                <a
+                  href="#services"
+                  class="block px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
+                  >Consultancy</a
+                >
+                <a
+                  href="#services"
+                  class="block px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
+                  >Procurement</a
+                >
+                <a
+                  href="#services"
+                  class="block px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
+                  >Managed Services</a
+                >
+                <a
+                  href="#services"
+                  class="block px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
+                  >Cloud Services</a
+                >
+                <a
+                  href="#services"
+                  class="block px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
+                  >Maintenance Solutions</a
+                >
+                <a
+                  href="#services"
+                  class="block px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
+                  >Security Solutions</a
+                >
+              </div>
+            </div>
+
+            <!-- Contact us Button -->
+            <a
+              href="#contact"
+              class="bg-[#41a952] hover:bg-[#349645] text-white font-semibold text-sm px-6 py-2.5 rounded-md shadow transition duration-200 inline-block"
+            >
+              Contact us
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Icon (Visible on small screens) -->
+          <a
+            href="#services"
+            class="md:hidden text-white hover:text-blue-200 p-2"
+          >
+            <i class="fa-solid fa-bars text-xl"></i>
+          </a>
+        </div>
+      </header>
+
+      <!-- Hero Main Content (Spacious, Vertically Positioned) -->
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-16 md:pt-24"
+      >
+        <div class="max-w-2xl">
+          <!-- Subtitle -->
+          <p
+            class="text-white text-sm md:text-base font-semibold tracking-wide mb-3"
+          >
+            We Provide IT-Services
+          </p>
+
+          <!-- Main Title -->
+          <h1
+            class="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white tracking-tight leading-[1.12] mb-6 font-heading"
+          >
+            One Business -<br />
+            Multiple IT Services
+          </h1>
+
+          <!-- Description Paragraphs -->
+          <div
+            class="text-white text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xl space-y-2.5 font-normal"
+          >
+            <p>
+              We help businesses in many ways, tailoring technology solutions to
+              fit Organisations' needs.
+            </p>
+            <p>
+              With the constant changes in technology, we proud ourselves for
+              listening to our clients’ needsand offer a wide range of the most
+              updated solutions
+            </p>
+          </div>
+
+          <!-- Green CTA Button -->
+          <a
+            href="#services"
+            class="inline-block bg-green-600 hover:bg-[#349645] text-white font-semibold text-sm sm:text-base px-8 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition duration-200 tracking-wide"
+          >
+            Services we provide
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OVERLAPPING BLUE SALES BOX ================= -->
+    <div class="relative z-30 max-w-5xl mx-auto px-4 -mt-14 sm:-mt-16">
+      <div
+        class="text-white rounded-sm shadow-xl p-6 sm:p-8 flex flex-col items-start justify-between gap-5"
+        style="background: linear-gradient(135deg, #2b7bc7 0%, #388ad4 100%)"
+      >
+        <div>
+          <h3
+            class="text-lg sm:text-xl md:text-2xl font-bold font-heading leading-snug"
+          >
+            Our dedicated sales team is here to help you find the right IT
+            solution.
+          </h3>
+        </div>
+        <div class="flex items-center space-x-3.5 flex-shrink-0">
+          <!-- Dark Navy Rounded Icon Container -->
+          <div
+            class="w-11 h-11 rounded-lg bg-[#142236] border border-blue-300/20 flex items-center justify-center text-[#41a952] shadow-inner"
+          >
+            <i class="fa-solid fa-envelope text-lg"></i>
+          </div>
+          <!-- Sales contact text -->
+          <div class="text-sm">
+            <span class="font-bold text-white block text-sm leading-tight"
+              >Sales:</span
+            >
+            <a
+              href="mailto:sales@globalit.technology"
+              class="text-blue-100 hover:text-white underline decoration-blue-300 text-xs sm:text-sm transition"
+            >
+              sales@globalit.technology
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SERVICES SECTION ================= -->
+    <section id="services" class="relative py-20 hexagonal-pattern">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- Section Title -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-gray-900 font-heading tracking-tight leading-snug"
+          >
+            A full range of tech services <br class="hidden sm:inline" />
+            to support your business growth
+          </h2>
+        </div>
+
+        <!-- 6 Service Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- 1. Managed Services -->
+          <div class="flex items-start space-x-5">
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-brand-blue"
+            >
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-2">
+                Managed Services
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                Global IT ensures your systems are properly maintained at a
+                mutually agreed upon price. Proactive management puts your
+                business in ...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-xs font-bold text-brand-green hover:underline"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Cloud Services -->
+          <div class="flex items-start space-x-5">
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-brand-blue"
+            >
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.5 9.75a6 6 0 0111.573-2.226 3.75 3.75 0 014.177 4.226H20.25A4.5 4.5 0 0115.75 18H5.25A5.25 5.25 0 014.5 9.75z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-2">
+                Cloud Services
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                Global IT provides leading cloud services to enable you and your
+                employees to access your business files from anywhere on ...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-xs font-bold text-brand-green hover:underline"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Maintenance Solutions -->
+          <div class="flex items-start space-x-5">
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center"
+            >
+              <!-- Crossed wrench and screwdriver -->
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6-4.5 4.5-1.4-1.4a1 1 0 00-1.4 0l-4.2 4.2a1 1 0 000 1.4l1.4 1.4a1 1 0 001.4 0l4.2-4.2a1 1 0 000-1.4l-1.4-1.4 4.5-4.5 1.6 1.6a1 1 0 001.4 0l1.4-1.4a1 1 0 000-1.4l-3.2-3.2a1 1 0 00-1.4 0l-1.4 1.4z"
+                  fill="#2b77c5"
+                />
+                <path d="M6 3.5l3.5 3.5-2 2L4 5.5z" fill="#ef4444" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-2">
+                Maintenance Solutions
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                Our network cabling technicians are fully registered and
+                certified by ACMA, the Australian Communications and Media
+                Authority, and help us ...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-xs font-bold text-brand-green hover:underline"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Procurement -->
+          <div class="flex items-start space-x-5">
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-brand-blue"
+            >
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-2">
+                Procurement
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                Our team offers end-to-end solutions, including project
+                planning, procurement, ICT hardware deployment, zero-touch
+                deployment, and fleet management. Our approach frees ...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-xs font-bold text-brand-green hover:underline"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Consultancy -->
+          <div class="flex items-start space-x-5">
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center"
+            >
+              <!-- Colorful Bar Chart -->
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#e0f2fe" opacity="0.6" />
+                <rect x="6" y="11" width="3" height="7" rx="1" fill="#ec4899" />
+                <rect
+                  x="11"
+                  y="8"
+                  width="3"
+                  height="10"
+                  rx="1"
+                  fill="#3b82f6"
+                />
+                <rect
+                  x="16"
+                  y="5"
+                  width="3"
+                  height="13"
+                  rx="1"
+                  fill="#f59e0b"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-2">
+                Consultancy
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                Whether it’s strategy, planning and execution, architecture,
+                business transformation, risk management or business continuity,
+                we offer expert ICT consultation services ...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-xs font-bold text-brand-green hover:underline"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Security Solutions -->
+          <div class="flex items-start space-x-5">
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center text-brand-blue"
+            >
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zM12 4.093a12.71 12.71 0 005.65 2.148 11.237 11.237 0 01-5.65 14.808 11.237 11.237 0 01-5.65-14.808A12.71 12.71 0 0012 4.093z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 font-heading mb-2">
+                Security Solutions
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                We help selecting the right platform and with architecting and
+                designing a solution that meets your business and technical
+                requirements. ...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-xs font-bold text-brand-green hover:underline"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAROUSEL / PARTNER PROMO CARD ================= -->
+
+    <!-- ================= STATS COUNTER BAR ================= -->
+    <section class="w-full bg-brand-blue py-14 px-6">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white"
+      >
+        <!-- Counter 1 -->
+        <div>
+          <div class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading">
+            120
+          </div>
+          <div class="text-xs sm:text-sm font-medium text-blue-100 mt-2">
+            Projects Completed
+          </div>
+        </div>
+
+        <!-- Counter 2 -->
+        <div>
+          <div class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading">
+            175
+          </div>
+          <div class="text-xs sm:text-sm font-medium text-blue-100 mt-2">
+            Satisfied Clients
+          </div>
+        </div>
+
+        <!-- Counter 3 -->
+        <div>
+          <div class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading">
+            15
+          </div>
+          <div class="text-xs sm:text-sm font-medium text-blue-100 mt-2">
+            Experienced Staff
+          </div>
+        </div>
+
+        <!-- Counter 4 -->
+        <div>
+          <div class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading">
+            9.1
+          </div>
+          <div class="text-xs sm:text-sm font-medium text-blue-100 mt-2">
+            Customer NPS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT OUR COMPANY ================= -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+        >
+          <!-- Left: Text -->
+          <div>
+            <h2
+              class="text-3xl font-extrabold text-gray-900 font-heading tracking-tight mb-5"
+            >
+              About our company
+            </h2>
+
+            <!-- Highlight Box -->
+            <div
+              class="bg-gray-100 text-gray-800 text-sm px-3 py-1.5 rounded inline-block mb-5"
+            >
+              Global IT Technology is an
+              <strong class="font-bold text-gray-900"
+                >Australian family-owned business</strong
+              >
+              founded in Melbourne.
+            </div>
+
+            <!-- Description Paragraphs -->
+            <div class="space-y-4 text-sm text-gray-600 leading-relaxed">
+              <p>
+                Our founder and director brings to the table
+                <strong class="font-semibold text-gray-900"
+                  >20 years' experience working in telecommunications and
+                  Technology</strong
+                >
+                as a business analyst, project manager and system administrator
+                across different industries.
+              </p>
+              <p>
+                Global IT Technology was founded to follow her dream of
+                establishing an Australia-based company that, different from
+                other IT companies, could offer flexible services and count on a
+                <strong class="font-semibold text-gray-900"
+                  >highly skilled team</strong
+                >.
+              </p>
+              <p class="font-bold text-gray-900">
+                Based on her experience of seeing clients under pressure to
+                purchase overpriced items that they do not necessarily need,
+                Global IT Technology's mission is to create a trustworthy
+                relationship with customers.
+              </p>
+            </div>
+
+            <!-- Button -->
+            <div class="mt-8">
+              <a
+                href="#about"
+                class="inline-block bg-brand-green bg-brand-green-hover text-white font-bold text-xs uppercase tracking-wider px-7 py-3 rounded shadow transition"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Team Image -->
+          <div>
+            <div class="rounded shadow overflow-hidden bg-gray-100">
+              <img
+                src="https://b2363094.smushcdn.com/2.0/2363094/wp-content/uploads/2021/03/video-1-1.jpg?lossy=1&strip=1&webp=1"
+                alt="Global IT Team at Work"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR PARTNERS ================= -->
+    <section class="py-16 bg-white border-t border-gray-100">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <h2 class="text-2xl font-bold text-gray-900 font-heading mb-8">
+          Our Partners
+        </h2>
+
+        <!-- Partner Logos -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 items-center justify-items-center gap-10 md:gap-14 py-4"
+        >
+          <!-- Poly -->
+          <div class="h-24 md:h-28 w-full flex items-center justify-center p-3">
+            <img
+              src="https://b2363094.smushcdn.com/2.0/2363094/wp-content/uploads/2021/12/poly.png?lossy=1&strip=1&webp=1"
+              alt="Poly"
+              class="h-14 sm:h-16 md:h-20 w-auto max-w-full object-contain filter hover:opacity-90 transition duration-200"
+            />
+          </div>
+
+          <!-- Ekahau -->
+          <div class="h-24 md:h-28 w-full flex items-center justify-center p-3">
+            <img
+              src="https://b2363094.smushcdn.com/2.0/2363094/wp-content/uploads/2021/12/ekahau.png?lossy=1&strip=1&webp=1"
+              alt="Ekahau"
+              class="h-14 sm:h-16 md:h-20 w-auto max-w-full object-contain filter hover:opacity-90 transition duration-200"
+            />
+          </div>
+
+          <!-- Duo -->
+          <div class="h-24 md:h-28 w-full flex items-center justify-center p-3">
+            <img
+              src="https://b2363094.smushcdn.com/2.0/2363094/wp-content/uploads/2021/12/duo.png?lossy=1&strip=1&webp=1"
+              alt="Duo Security"
+              class="h-14 sm:h-16 md:h-20 w-auto max-w-full object-contain filter hover:opacity-90 transition duration-200"
+            />
+          </div>
+
+          <!-- Microsoft Surface Modern Solutions Badge -->
+          <div class="h-24 md:h-28 w-full flex items-center justify-center p-3">
+            <img
+              src="https://b2363094.smushcdn.com/2.0/2363094/wp-content/uploads/2022/06/microsoft-surface-modern-solutions-program-badge-e1655258125541.png?lossy=1&strip=1&webp=1"
+              alt="Microsoft Surface Modern Solutions Badge"
+              class="h-20 sm:h-24 md:h-28 w-auto max-w-full object-contain filter hover:opacity-90 transition duration-200"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BLUE CTA BANNER ================= -->
+    <section
+      id="contact"
+      class="w-full bg-brand-blue py-10 px-6 text-center text-white"
+    >
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-base sm:text-lg font-medium mb-1 opacity-90">
+          Contact our team now:
+        </h3>
+        <a
+          href="tel:0390708103"
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading tracking-tight hover:underline"
+        >
+          03 9070 8103
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= DARK FOOTER ================= -->
+    <footer class="bg-brand-dark text-gray-400 text-sm">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+        <!-- 4 Columns Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12"
+        >
+          <!-- Column 1: Brand Info -->
+          <div>
+            <!-- White Logo Representation -->
+            <div class="flex items-center space-x-3 mb-5">
+              <img
+                src="https://b2363094.smushcdn.com/2.0/2363094/wp-content/uploads/2021/08/Group-8@2x.png?lossy=1&strip=1&webp=1"
+                alt="Global IT Technology Logo"
+                class="h-9 w-auto object-contain filter brightness-200"
+              />
+            </div>
+
+            <p class="text-xs text-gray-400 leading-relaxed mb-6">
+              Our solutions are designed to increase the efficiency and
+              reliability of your systems so that you can focus on the aspects
+              of your business that really matter to you.
+            </p>
+
+            <!-- Facebook Social Icon -->
+            <div>
+              <a
+                href="https://www.facebook.com/Global-IT-Technology-101908881958345"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white hover:text-brand-blue text-lg transition"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-square-facebook text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick links -->
+          <div>
+            <h3 class="text-white font-bold font-heading text-sm mb-4">
+              Quick links
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li><a href="#" class="hover:text-white transition">Home</a></li>
+              <li>
+                <a href="#about" class="hover:text-white transition"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="hover:text-white transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Services -->
+          <div>
+            <h3 class="text-white font-bold font-heading text-sm mb-4">
+              Services
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a href="#services" class="hover:text-white transition"
+                  >Consultancy</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition"
+                  >Procurement</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition"
+                  >Managed Services</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition"
+                  >Cloud Services</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition"
+                  >Maintenance Solutions</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition"
+                  >Security Solutions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact info -->
+          <div>
+            <h3 class="text-white font-bold font-heading text-sm mb-4">
+              Contact info
+            </h3>
+            <div class="space-y-2 text-xs text-gray-400">
+              <p>PO Box 298 Batman, Melbourne, VIC 3058</p>
+              <p>
+                <a href="tel:0390708103" class="hover:text-white transition"
+                  >03 9070 8103</a
+                >
+              </p>
+              <p>
+                <a
+                  href="mailto:info@globalit.technology"
+                  class="hover:text-white transition"
+                  >info@globalit.technology</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-footer line -->
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4"
+        >
+          <div>© 2026 Global IT Technology. All rights reserved.</div>
+          <div>
+            <a href="#" class="hover:text-gray-300 transition"
+              >Privacy Policy (PDF)</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= FLOATING ACTION BUTTON ================= -->
+    <div class="fixed bottom-5 right-5 z-50">
+      <a
+        href="https://wa.me/61390708103"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-xl flex items-center justify-center transition transform hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+      </a>
+    </div>
+  </body>
+</html>
